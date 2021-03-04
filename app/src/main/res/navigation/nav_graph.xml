@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/yellowFragment">
+
+    <fragment
+        android:id="@+id/yellowFragment"
+        tools:layout="@layout/fragment_yellow"
+        android:name="com.example.navigationanimation.YellowFragment"
+        android:label="YellowFragment" >
+        <action
+            android:id="@+id/action_yellowFragment_to_greenFragment"
+            app:destination="@id/greenFragment"
+            app:enterAnim="@anim/slide_fade_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/greenFragment"
+        tools:layout="@layout/fragment_green"
+        android:name="com.example.navigationanimation.GreenFragment"
+        android:label="GreenFragment" >
+        <action
+            android:id="@+id/action_greenFragment_to_blueFragment"
+            app:destination="@id/blueFragment"
+            app:enterAnim="@anim/slide_fade_in" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/blueFragment"
+        android:name="com.example.navigationanimation.BlueFragment"
+        tools:layout="@layout/fragment_blue"
+        android:label="BlueFragment" />
+
+</navigation>
